@@ -106,7 +106,7 @@ def index():
         max_pages = int(request.form.get("max_pages", 5))
         max_depth = int(request.form.get("max_depth", 1))
         results = crawl_site(url, max_pages, max_depth)
-        save_to_db(url, results)
+        #save_to_db(url, results)
         return render_template_string(HTML, results=results)
     return render_template_string(HTML)
 
